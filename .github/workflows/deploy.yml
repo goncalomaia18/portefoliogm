@@ -1,0 +1,23 @@
+name: Deploy para InfinityFree
+
+# A automação vai correr sempre que houver um "push" na branch "main"
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  web-deploy:
+    name: Enviar via FTP
+    runs-on: ubuntu-latest
+    steps:
+    - name: Obter o código do repositório
+      uses: actions/checkout@v4
+
+    - name: Sincronizar ficheiros para a InfinityFree
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: /goncalomaiadev.pt/htdocs/ # A pasta pública da InfinityFree
