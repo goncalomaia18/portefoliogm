@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Meu Portfólio | Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonte moderna do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="imagens/logo2.png" alt="Logo Gonçalo Maia">
+            </a>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Olá, eu sou o Gonçalo Maia</h1>
+            <p>Desenvolvedor de Websites e Aplicações focado em soluções digitais criativas.</p>
+            <a href="#projetos" class="btn">Ver Meus Trabalhos</a>
+        </div>
+    </header>
+
+    <section id="sobre" class="container">
+        <h2>Sobre Mim</h2>
+        <p>Sou entusiasta de tecnologia com facilidade em transformar ideias em código. Gosto de criar interfaces intuitivas e aplicações que resolvam problemas reais.</p>
+        <div class="skills">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Mobile Apps</span>
+            <span class="skill-tag">Git</span>
+        </div>
+    </section>
+
+    <section id="projetos" class="container">
+        <h2>Os Meus Projetos</h2>
+
+        <div class="projects-grid">
+            
+            <div class="project-card" data-modal="modal-1">
+                <img src="imagens/jspedrosa/logojspedrosa.png" alt="Logo JS Pedrosa" class="project-img">
+                <h3>JS Pedrosa APP</h3>
+                <p>Clica para veres mais sobre o projeto</p>
+            </div>
+
+            <div class="project-card" data-modal="modal-2">
+                <img src="imagens/fernandoferreira/herofernando.png" alt="Site Fernando Ferreira" class="project-img">
+                <h3>Website Fernando Ferreira</h3>
+                <p>Clica para veres mais sobre o projeto</p>
+            </div>
+
+            <div class="project-card" data-modal="modal-3">
+                <img src="imagens/freedomagency/logofreedomagency.jpg" alt="Site Fernando Ferreira" class="project-img">
+                <h3>Website FreedomAgency</h3>
+                <p>Clica para veres mais sobre o projeto</p>
+            </div>
+
+        </div> 
+        
+        <div id="modal-1" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>JS Pedrosa APP</h2>
+                <p>Uma aplicação mobile para gestão de uma loja de mobiliário. Contém funcionalidades para gerir orçamentos e clientes.</p> 
+                <p>Feita em Java/React e uma base de dados em PostgreSQL.</p>
+                
+                <div class="modal-gallery">
+                    <img src="imagens/jspedrosa/jspedrosa.jpg" alt="Ecrã da App">
+                    <img src="print-extra2.jpg" alt="Consulta Cliente"> </div>
+                
+                <div class="project-links">
+                    <a href="link-do-github" class="github" target="_blank">Ver Código no GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-2" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Site para campanha partidária</h2>
+                <p>Um site feito para promover uma campanha partidária local. Feito à medida. Não finalizado devido a falta de resposta do mesmo.</p> 
+                <p>Feito em HTML, CSS e JavaScript.</p>
+                
+                <div class="modal-gallery">
+                    <img src="imagens/fernandoferreira/herofernando.png" alt="Ecrã Inicial">
+                    <img src="imagens/fernandoferreira/contactofernando.png" alt="Ecrã de Contactos">
+                </div>
+                
+                <div class="project-links">
+                    <a href="http://www.fernandoferreira2025.pt" class="github" target="_blank">Ver site</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-3" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Website FreedomAgency</h2>
+                <p>Um website para a agência de marketing FreedomAgency. Feito à medida para atender às necessidades específicas do projeto. Conta com manutenção sempre que necessário.</p>
+                <p>Feito em HTML, CSS e JavaScript.</p>
+                
+                <div class="modal-gallery">
+                    <img src="imagens/freedomagency/herofreedom.png" alt="Ecrã Inicial">
+                    <img src="imagens/freedomagency/formulariofreedom.png" alt="Ecrã de Contactos">
+                </div>
+                
+                <div class="project-links">
+                    <a href="http://www.freedomagency.pt" class="github" target="_blank">Ver site</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer id="contacto">
+        <div class="container">
+            <h2>Vamos trabalhar juntos?</h2>
+            <p>Estou sempre disponível para novos desafios.</p>
+            <div class="social-links">
+                <a href="mailto:goncalo.maia@outlook.com">Email</a>
+                <a href="https://www.linkedin.com/in/goncalofmaia/">LinkedIn</a>
+                <a href="https://github.com/goncalomaia18">GitHub</a>
+            </div>
+            <p class="copyright">&copy; 2026 Gonçalo Maia. Feito com HTML e CSS.</p>
+        </div>
+    </footer>
+
+
+
+    <script>
+    // 1. Selecionar todos os cards e botões de fechar
+    const cards = document.querySelectorAll('.project-card');
+    const closeBtns = document.querySelectorAll('.close-btn');
+
+    // 2. Abrir o modal correspondente ao clicar num card
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            const modalId = card.getAttribute('data-modal'); // Lê o "modal-1", etc.
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'flex'; // Torna o modal visível
+            }
+        });
+    });
+
+    // 3. Fechar o modal ao clicar no "X"
+    closeBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const modal = e.target.closest('.modal');
+            modal.style.display = 'none'; // Esconde o modal
+        });
+    });
+
+    // 4. Fechar o modal ao clicar fora da caixa (no fundo escuro)
+    window.addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal')) {
+            e.target.style.display = 'none';
+        }
+    });
+</script>
+
+
+</body>
+</html>
